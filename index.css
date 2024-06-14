@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url(backgroundtest.jpg) no-repeat center center/cover;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav a {
+  font-size: 1.15rem;
+  color: white;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+
+header li {
+  display: inline-block;
+  position: relative;
+}
+
+header li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  color: gray;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  width: 8.5rem;
+}
+
+.sub-menu li {
+  display: block;
+}
+
+.sub-menu li:hover a {
+  color: red;
+}
+
+.honneur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 750px;
+  width: 100%;
+}
+
+.honneur img {
+  max-width: 100%;
+  height: auto;
+}
+
+.present {
+  color: black;
+  text-align: center;
+  background-color: #e2012d;
+  font-size: 20px;
+  height: 650px;
+  margin-top: -2%;
+  padding: 20px;
+}
+
+.faq-section {
+  padding: 20px;
+  background-color: black;
+  width: 100%;
+  color: white;
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid orange;
+  padding-bottom: 10px;
+}
+
+.question {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.answer {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.sponsorsFooter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: black;
+}
+
+.sponsorsFooter ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sponsorsFooter li {
+  flex: 1 0 20%; /* 20% width for 5 columns */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.sponsorsFooter img {
+  max-width: 100px;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .sponsorsFooter li {
+    flex: 1 0 40%; /* 40% width for 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsorsFooter li {
+    flex: 1 0 100%; /* 100% width for 1 column on very small screens */
+  }
+}
